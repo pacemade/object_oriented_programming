@@ -1,4 +1,7 @@
-require "./cat.rb"
+require './cat.rb'
 
-captaincuddles.Cat.new(cap, cheese, 10)
-judgedoody.Cat.new(doody, rats, 20)
+cap = Cat.new("cap", "cheese", 10)
+doody = Cat.new("doody", "rats", 20)
+
+cap.eats_at
+doody.eats_at
