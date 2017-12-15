@@ -25,7 +25,10 @@ venues.each do |venues|
    end
 end
 
+good_venues = venues.find_all do |venue|
+  venue[:city] == "Toronto" && venue[:wheelchair_accessible] == true && venue[:capacity] >= 150
+end
+
 
 # if both the wheelchair_accessible is true, and the capacity is >= 150
 # then store the address in the overall array
- &&
