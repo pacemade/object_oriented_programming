@@ -5,3 +5,6 @@ doody = Cat.new("doody", "rats", 20)
 
 cap.eats_at
 doody.eats_at
+
+cap.meow
+doody.meow
