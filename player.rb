@@ -6,6 +6,10 @@ class Player
       @health_points = 10
     end
 
+    def restart
+
+    end
+
     def level_up
       @lives += 1
     end
@@ -17,5 +21,16 @@ class Player
       end
     end
 
+    def fight
+      @health_points -= 1
+      if @health_points <= 0
+        @lives -= 1
+        @health_points = 10
+          if @lives <= 0
+            @lives = 5
+            @gold_coins = 0
+          end
+      end
+    end
 
 end
