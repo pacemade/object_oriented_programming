@@ -15,8 +15,26 @@ class Paperboy
   end
 
   def deliver(start_address, end_address)
-    @exp = ( end_address - start_address ) / 2
+    total = ( end_address - start_address ) + 1
+    counter = 0
+    if total >= 50
+      @exp = @exp + ( (total - 50) / 2 )
+        until ( 50 + @exp ) == counter
+          @earnings = 0.25 * total
+          counter +=1
+        end
+        @earnings = @earnings + ( @earnings * 0.50 )
+    else
+        @earnings = ( 0.25 * total ) - 2
+    end
+    "#{@name} earned #{@earnings}"
   end
+
+  def report
+    "My name is #{@name}, I've delivered #{@exp} papers and earned #{@earnings}"
+  end
+
+
 
 end
 #
